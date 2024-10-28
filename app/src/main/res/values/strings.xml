@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BangkitAPI</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_home">Home</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="favorite">Favorite</string>
+    <string name="setting">Setting</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="finished">Finished</string>
+    <string name="register">Register</string>
+    <string name="title_upcoming">Dicoding Event</string>
+    <string name="title_favorite">Tersimpan</string>
+    <string name="title_setting">Setting</string>
+    <string name="description_upcoming">Recommendation for you</string>
+    <string name="description_setting">Ubah Theme</string>
+    <string name="description_favorite">Jangan lewatkan</string>
+    <string name="content_upcoming">Fragment Upcoming</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="quota_format">%1$d / %2$d</string>
+
+</resources>
