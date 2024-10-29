@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -41,6 +42,7 @@ class FinishedDetailActivity : AppCompatActivity() {
         val eventTime = findViewById<TextView>(R.id.tv_event_time)
         val eventQuota = findViewById<TextView>(R.id.tv_event_quota)
         val eventDescription = findViewById<TextView>(R.id.tv_event_description)
+        val btnRegist = findViewById<Button>(R.id.btn_regist)
 
         // Jika eventItem tidak null, tampilkan datanya
         eventItem?.let {
@@ -53,6 +55,18 @@ class FinishedDetailActivity : AppCompatActivity() {
                 it.description ?: "No Description Available",
                 HtmlCompat.FROM_HTML_MODE_LEGACY
             )
+
+            // button register
+            btnRegist.setOnClickListener {
+                val url = eventItem?.link // Mengakses properti link dari eventItem
+                if (!url.isNullOrEmpty()) {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                    startActivity(intent)
+                } else {
+                    // Jika link tidak ada, tampilkan pesan atau handling lain
+                    btnRegist.text = "Link Not Available"
+                }
+            }
 
             // Tampilkan gambar menggunakan Glide
             Glide.with(this)
